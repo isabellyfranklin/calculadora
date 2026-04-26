@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/estilo.css">
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="img/favicon-calculadora.png" type="image/x-icon">
+    <title>Calculadora</title>
+</head>
+<body>
+    <!--BOTÃO BLUE e PINK-->
+    <header>
+        <div class="trilho" id="trilho">
+            <div class="indicador"></div>
+        </div>
+    </header>
+    <main>
+        <h2>Calculadora</h2>
+        <!--CORPO CALCULADORA-->
+        <div class="calculador">
+            <input type="text" disabled  id="display" value="123">
+            <!--BOTOES-->
+            <div class="caixa-botoes">
+                <button class="btn-pric" onclick="clean()">C</button>
+                <button onclick="back()">&lt;</button>
+                <button class="btn-calcular" onclick="insertToDisplay('/')">/</button>
+                <button class="btn-calcular" onclick="insertToDisplay('*')">*</button>
+                <button onclick="insertToDisplay('7')">7</button>
+                <button onclick="insertToDisplay('8')">8</button>
+                <button onclick="insertToDisplay('9')">9</button>
+                <button class="btn-calcular" onclick="insertToDisplay('-')">-</button>
+                <button onclick="insertToDisplay('4')">4</button>
+                <button onclick="insertToDisplay('5')">5</button>
+                <button onclick="insertToDisplay('6')">6</button>
+                <button class="btn-calcular" onclick="insertToDisplay('+')">+</button>
+                <button onclick="insertToDisplay('1')">1</button>
+                <button onclick="insertToDisplay('2')">2</button>
+                <button onclick="insertToDisplay('3')">3</button>
+                <button class="btn-zero" onclick="insertToDisplay('0')">0</button>
+                <button class="btn-calcular" onclick="insertToDisplay('.')">.</button>
+                <button class="btn-resultado" onclick="resultado()">=</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

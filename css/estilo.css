@@ -1,0 +1,194 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-rosa: pink;
+    --cor-rosa-claro:rgb(249, 213, 219);
+    --cor-rosa-chiclete:rgb(255, 158, 174);
+    --cor-rosa-escuro:palevioletred;
+    --cor-rosa-chiclete-numeros:rgb(255, 158, 174);
+    --cor-rosa-claro-titulo:rgb(249, 213, 219);
+
+
+
+    --cor-principal:rgb(30, 75, 87);
+    --cor-branca: #ffffff;
+    --cor-azul-escuro:rgb(2, 38, 67);
+    --cor-azul-escuro-medio:rgb(6, 67, 117);
+    --cor-beige-claro:blanchedalmond;
+    --cor-beige-escuro:#c09a64;
+    --cor-cinza-claro:rgb(224, 221, 221);
+    --cor-beige-claro-titulo:blanchedalmond;
+    --cor-azul-escuro-numeros:rgb(6, 67, 117);
+    --cor-branca-numeros:#ffffff;
+}
+
+body{
+    background-color: var(--cor-principal);
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+/*Botão Blue e Pink*/
+.trilho{
+    background-color: white;
+    width: 130px;
+    height: 50px;
+    border-radius: 45px ;
+    margin: 10px;
+
+    position: relative;
+}
+
+.indicador{
+    width: 40px;
+    height: 45px;
+    background-color: black;
+    border-radius: 50%;
+    margin-top: 2px;
+
+    position: absolute;
+    left: 7px;
+    cursor: pointer;
+}
+
+.trilho.dark .indicador{
+    left: 80px;
+    background-color: var(--cor-branca);
+}
+
+.trilho.dark{
+    background-color: var(--cor-rosa);
+}
+
+body.dark h2{
+    color: var(--cor-rosa-claro-titulo);
+}
+
+body.dark{
+    background-color:rgb(255, 255, 255);
+}
+
+body.dark .calculador{
+    background-color:var(--cor-rosa);
+}
+
+body.dark #display{
+    background-color: var(--cor-rosa-claro);
+    color: var(--cor-branca-numeros);
+}
+
+body.dark .caixa-botoes button{
+    background-color: var(--cor-branca-numeros);
+    color:var(--cor-rosa-chiclete-numeros)
+}
+
+body.dark .caixa-botoes .btn-calcular{
+    background-color:var(--cor-rosa-escuro);
+    color: var(--cor-branca-numeros);
+}
+
+body.dark .caixa-botoes .btn-pric{
+    background-color:  var(--cor-rosa-chiclete);
+    color: var(--cor-branca-numeros);
+}
+
+body.dark .caixa-botoes .btn-resultado{
+    background-color: var(--cor-rosa-chiclete);
+    color: var(--cor-branca-numeros);
+}
+/*Botão Blue e Pink*/
+
+
+h2{
+    color: var(--cor-beige-claro-titulo);
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh
+}
+
+.calculador{
+    background-color:var(--cor-azul-escuro);
+    width: 250px;
+    height: 350px;
+    border-radius:10px ;
+    padding: 20px;
+}
+
+
+#display{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(10, 83, 143, 0.782);
+    color: var(--cor-branca-numeros);
+    text-align: right;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.caixa-botoes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr;
+    gap: 8px;
+}
+
+.caixa-botoes button{
+   border: none; 
+   height: 45px;
+   border: none;
+   border-radius: 6px;
+   font-size: 16px;
+   background-color:var(--cor-beige-claro);
+   color: var(--cor-azul-escuro-numeros);
+   font-weight: bolder;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(213, 213, 213);
+    transition: .5s;
+}
+
+.caixa-botoes .btn-calcular{
+    background-color:var(--cor-azul-escuro-medio);
+    color:#BFA98A;
+    font-weight: bolder;
+}
+
+.caixa-botoes .btn-pric{
+    font-weight: bolder;
+    font-size: 15px;
+    background-color:var(--cor-beige-escuro);
+    color: var(--cor-azul-escuro-numeros);
+}
+
+.caixa-botoes .btn-zero{
+    grid-column: 1/ 3 ;
+    color: var(--cor-azul-escuro-numeros);
+}
+
+.caixa-botoes .btn-resultado{
+    font-weight: bolder;
+    font-size: 15px;
+    background-color:var(--cor-beige-escuro);
+    grid-row:  4 /  6;
+    grid-column: 4;
+    height: 100%;
+}
